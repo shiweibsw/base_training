@@ -46,10 +46,21 @@ class Training_Node_GetCenterNode {
     }
 
 
-    private Node getCenterNode(Node header) {
+    private Node getCenterNode4(Node header) {
         if (header == null) return null;
         Node fast = header;
         Node slow = header;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    private Node getCenterNode5(Node head) {
+        if (head == null) return null;
+        Node fast = head;
+        Node slow = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;

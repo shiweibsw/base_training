@@ -110,6 +110,32 @@ class Training_Node_Delete_Last_Kth {
     }
 
 
+    private Node deleteLastKth5(Node head, int k) {
+        Node fast = head.next;
+        int i = 1;
+        while (fast != null && i < k) {
+            fast = fast.next;
+            ++i;
+        }
+        if (fast == null) return head;
+        Node slow = head;
+        Node prev = null;
+        while (fast.next != null) {
+            fast = fast.next;
+            prev = slow;
+            slow = slow.next;
+        }
+        if (prev == null) {
+            head = head.next;
+        } else {
+            prev.next = prev.next.next;
+        }
+
+        return head;
+
+    }
+
+
     public static class Node {
         private int data;
         private Node next;
