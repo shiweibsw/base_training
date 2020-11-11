@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import static com.bsw.base_training.sort.Training_Sort_select.selectSort;
+import static com.bsw.base_training.sort.Training_sort_quick.quickSort;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         int[] a = new int[]{4, 2, 8, 1, 9, 4, 6, 7, 0};
         findViewById(R.id.btn).setOnClickListener(v -> {
-            selectSort(a, a.length);
+            quickSort(a, a.length);
             for (int i = 0; i < a.length; i++) {
                 Log.i(TAG, "onCreate: "+a[i]);
             }
