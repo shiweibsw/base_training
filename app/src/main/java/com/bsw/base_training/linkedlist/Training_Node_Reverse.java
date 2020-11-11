@@ -88,7 +88,6 @@ class Training_Node_Reverse {
         }
         return pre;
 
-
     }
 
 
