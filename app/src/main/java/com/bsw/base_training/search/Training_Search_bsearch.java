@@ -131,5 +131,10 @@ public class Training_Search_bsearch {
         return -1;
     }
 
+    public static int besarch(int[] nums, int target) {
 
+
+
+        return -1;
+    }
 }

@@ -1,14 +1,11 @@
 package com.bsw.base_training;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 
-import static com.bsw.base_training.leetcode.leetcode_1122.relativeSortArray;
-import static com.bsw.base_training.leetcode.leetcode_1640.canFormArray;
-import static com.bsw.base_training.search.Training_Search_bsearch.getAbs;
-import static com.bsw.base_training.sort.Training_sort_quick.quickSort;
+import androidx.appcompat.app.AppCompatActivity;
+
+import static com.bsw.base_training.search.Training_Search_bsearch.besarch;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
 //        int[] a = new int[]{33,22,48,4,39,36,41,47,15,45};
 //        int[] b = new int[]{22,33,48,4};
         findViewById(R.id.btn).setOnClickListener(v -> {
-            Log.i(TAG, "=========="+getAbs());
+            int[] a = new int[]{4, 5, 6,7,9, 1, 2, 3};
+            Log.i(TAG, "==========" + besarch(a, a.length, 1));
         });
     }
 }
