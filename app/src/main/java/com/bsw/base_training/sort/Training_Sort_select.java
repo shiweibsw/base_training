@@ -55,5 +55,19 @@ public class Training_Sort_select {
         }
     }
 
+    private void selectSort3(int[] a, int n) {
+        if (n <= 1) return;
+        for (int i = 0; i < n; i++) {
+            int minInex = 0;
+            for (int j = i + 1; j < n; j++) {
+                if (a[j] < a[minInex]) {
+                    minInex = j;
+                }
+            }
+            int tmp = a[i];
+            a[i] = a[minInex];
+            a[minInex] = tmp;
+        }
+    }
 
 }

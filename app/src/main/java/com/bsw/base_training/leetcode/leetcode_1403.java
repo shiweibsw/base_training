@@ -22,13 +22,13 @@ class leetcode_1403 {
         }
         for (int i = 0; i < nums.length; i++) {
             int max = getMaxIndex(nums);
-            resultSum+=nums[max];
+            resultSum += nums[max];
             if (resultSum > sum - resultSum) {
                 result.add(nums[max]);
                 break;
             } else {
                 result.add(nums[max]);
-                nums[max]=0;
+                nums[max] = 0;
             }
         }
         return result;
