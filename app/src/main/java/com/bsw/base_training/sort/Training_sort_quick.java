@@ -95,7 +95,7 @@ public class Training_sort_quick {
     private void quickSortInternally2(int[] a, int p, int r) {
         if (p >= r) return;
         int q = partition2(a, p, r);
-        quickSortInternally2(a, p, q);
+        quickSortInternally2(a, p, q - 1);
         quickSortInternally2(a, q + 1, r);
     }
 
