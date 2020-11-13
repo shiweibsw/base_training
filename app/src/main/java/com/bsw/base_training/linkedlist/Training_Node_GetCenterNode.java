@@ -80,7 +80,19 @@ class Training_Node_GetCenterNode {
         return slow;
     }
 
-    private Node getCenterNode(Node head) {
+    private Node getCenterNode7(Node head) {
+        if (head == null) return null;
+        Node fast = head;
+        Node slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+
+    private Node getCenterNode8(Node head) {
         if (head == null) return null;
         Node fast = head;
         Node slow = head;
