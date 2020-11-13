@@ -1,5 +1,6 @@
 package com.bsw.base_training.linkedlist;
 
+
 /**
  * 单链表检测环
  *
@@ -122,4 +123,6 @@ class Training_Node_CheckCircle {
             return data;
         }
     }
+
+
 }
