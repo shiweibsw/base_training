@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
 //        int[] a = new int[]{33,22,48,4,39,36,41,47,15,45};
 //        int[] b = new int[]{22,33,48,4};
         findViewById(R.id.btn).setOnClickListener(v -> {
-            int[] a = new int[]{4, 5, 6,7,9, 1, 2, 3};
-            Log.i(TAG, "==========" + besarch(a, a.length, 1));
         });
     }
 }

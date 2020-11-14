@@ -33,6 +33,23 @@ public class Training_Search_bsearch {
         return -1;
     }
 
+    private int bsearch01(int[] a, int value) {
+        int low = 0;
+        int high = a.length - 1;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (a[mid] == value) {
+                return mid;
+            } else if (a[mid] > value) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+
+
     /**
      * 查找第一个值等于给定值的元素
      *
@@ -132,7 +149,6 @@ public class Training_Search_bsearch {
     }
 
     public static int besarch(int[] nums, int target) {
-
 
 
         return -1;

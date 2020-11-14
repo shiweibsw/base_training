@@ -1,5 +1,7 @@
 package com.bsw.base_training.sort;
 
+import static com.bsw.base_training.Utils.swap;
+
 /**
  * 选择排序练习
  * 选择排序算法的实现思路有点类似插入排序，也分已排序区间和未排序区间。但是选择排序每次会从未排序区间中找到最小的元素，将其放到已排序区间的末尾。
@@ -82,6 +84,20 @@ public class Training_Sort_select {
             int tmp = a[i];
             a[i] = a[minIndex];
             a[minIndex] = tmp;
+        }
+    }
+
+
+    private void selectSort5(int[] a, int n) {
+        if (n <= 1) return;
+        for (int i = 0; i < n; i++) {
+            int minIndex = 0;
+            for (int j = i + 1; j < n; j++) {
+                if (a[j] < a[minIndex]) {
+                    minIndex = a[j];
+                }
+            }
+            swap(a[i], a[minIndex]);
         }
     }
 }

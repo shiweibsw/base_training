@@ -1,5 +1,7 @@
 package com.bsw.base_training.sort;
 
+import static com.bsw.base_training.Utils.swap;
+
 /**
  * 快速排序练习
  * 思想：如果要排序数组中下标从 p 到 r 之间的一组数据，我们选择 p 到 r 之间的任意一个数据作为 pivot（分区点），
@@ -122,5 +124,36 @@ public class Training_sort_quick {
 
 
     //==========end==========
+    //==========start==========
 
+    private void quickSort3(int[] a, int n) {
+        quickSortInternally3(a, 0, n - 1);
+    }
+
+    private void quickSortInternally3(int[] a, int p, int r) {
+        if (p >= r) return;
+        int q = partition3(a, p, r);
+        quickSortInternally3(a, p, q - 1);
+        quickSortInternally3(a, q + 1, r);
+    }
+
+    private int partition3(int[] a, int p, int r) {
+        int pivot = a[r];
+        int i = p;
+        for (int j = p; j < r; j++) {
+            if (a[j] < pivot) {
+                if (i == j) {
+                    i++;
+                } else {
+                    swap(a[i], a[j]);
+                    i++;
+                }
+            }
+        }
+        swap(a[i], a[r]);
+        return i;
+    }
+
+
+    //==========end==========
 }

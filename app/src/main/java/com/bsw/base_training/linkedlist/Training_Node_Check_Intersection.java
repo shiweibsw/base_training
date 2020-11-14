@@ -23,6 +23,16 @@ class Training_Node_Check_Intersection {
         return node1;
     }
 
+    private Node checkIntersection1(Node l1, Node l2) {
+        Node node1 = l1;
+        Node node2 = l2;
+        while (node1 != node2) {
+            node1 = node1.next == null ? l2 : node1.next;
+            node2 = node2.next == null ? l1 : node2.next;
+        }
+        return node1;
+    }
+
     public static class Node {
         private int data;
         private Node next;
