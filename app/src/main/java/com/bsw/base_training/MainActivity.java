@@ -5,7 +5,9 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.bsw.base_training.search.Training_Search_bsearch.besarch;
+import java.util.Arrays;
+
+import static com.bsw.base_training.leetcode.leetcode_167.twoSum;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        int[] a = new int[]{33,22,48,4,39,36,41,47,15,45};
+        int[] a = new int[]{2, 3, 4};
 //        int[] b = new int[]{22,33,48,4};
         findViewById(R.id.btn).setOnClickListener(v -> {
+            Log.i(TAG, "onCreate: " + Arrays.toString(twoSum(a, 6)));
         });
     }
 }
