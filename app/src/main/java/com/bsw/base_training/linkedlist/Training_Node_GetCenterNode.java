@@ -114,6 +114,17 @@ class Training_Node_GetCenterNode {
         return slow;
     }
 
+    private Node getCenterNode10(Node head) {
+        if (head == null) return null;
+        Node fast = head;
+        Node slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
 
     public static class Node {
         private int data;
