@@ -169,11 +169,9 @@ public class Training_Search_bsearch {
                 if (mid == n - 1 || a[mid + 1] != value) return mid;
                 else low = mid + 1;
             }
-
         }
         return -1;
     }
-
 
     public int bsearch22(int[] a, int n, int value) {
         int low = 0;
@@ -256,7 +254,6 @@ public class Training_Search_bsearch {
         }
         return -1;
     }
-
 
     public int bsearch14(int[] a, int n, int value) {
         int low = 0;
