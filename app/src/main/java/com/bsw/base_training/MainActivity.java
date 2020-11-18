@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         int[] a = new int[]{-1, 2, 1, -4};
 //        int[] b = new int[]{22,33,48,4};
         findViewById(R.id.btn).setOnClickListener(v -> {
-            Log.i(TAG, "onCreate: "+threeSumClosest(a, 1));
+            Log.i(TAG, "onCreate: " + threeSumClosest(a, 1));
         });
     }
 }
