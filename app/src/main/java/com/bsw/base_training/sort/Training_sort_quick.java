@@ -216,8 +216,6 @@ public class Training_sort_quick {
         swap(a[i], a[r]);
         return i;
     }
-
-
     //==========end==========
 
 }
