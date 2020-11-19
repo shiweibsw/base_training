@@ -35,8 +35,7 @@ import java.util.Map;
  */
 class leetcode_1331 {
     public int[] arrayRankTransform(int[] arr) {
-        int[] tmpArr = new int[arr.length];
-        System.arraycopy(arr, 0, tmpArr, 0, arr.length);
+        int[] tmpArr = arr.clone();
         Arrays.sort(tmpArr);
         Map<Integer, Integer> cache = new HashMap<Integer, Integer>();
         int calibrate = 0;//因为结果要保证相同元素的下标相同，如果前边的元素出现了重复元素的话，后边的下标都需要减去出现重复元素的个数。
