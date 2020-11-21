@@ -155,7 +155,6 @@ public class Training_Search_bsearch {
         return -1;
     }
 
-
     public int bsearch12(int[] a, int n, int value) {
         int low = 0;
         int high = n - 1;
