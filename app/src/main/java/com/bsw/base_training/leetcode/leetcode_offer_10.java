@@ -46,8 +46,7 @@ class leetcode_offer_10 {
             dp[i] %= 1000000007;
         }
         return dp[n];
-
-        //        return fib1(n) % (1000000007);
+        //return fib1(n) % (1000000007);
     }
 
     public int fib1(int n) {
