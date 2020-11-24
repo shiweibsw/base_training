@@ -187,7 +187,7 @@ public class Training_Sort_merge {
     private void mergeSortInternally4(int[] a, int p, int r) {
         if (p >= r) return;
         int q = (r + p) / 2;
-        mergeSortInternally4(a, p, q - 1);
+        mergeSortInternally4(a, p, q);
         mergeSortInternally4(a, q + 1, r);
         merge4(a, p, q, r);
     }
@@ -229,7 +229,7 @@ public class Training_Sort_merge {
     private void mergeSortInternally5(int[] a, int p, int r) {
         if (p >= r) return;
         int q = (p + r) / 2;
-        mergeSortInternally5(a, p, q - 1);
+        mergeSortInternally5(a, p, q);
         mergeSortInternally5(a, q + 1, r);
         merge5(a, p, q, r);
     }
@@ -271,7 +271,7 @@ public class Training_Sort_merge {
     private void mergeSortInternally6(int[] a, int p, int r) {
         if (p >= r) return;
         int q = (p + r) / 2;
-        mergeSortInternally6(a, p, q - 1);
+        mergeSortInternally6(a, p, q);
         mergeSortInternally6(a, q + 1, r);
         merge6(a, p, q, r);
     }
@@ -302,6 +302,48 @@ public class Training_Sort_merge {
         }
     }
 
+
+    //==========end==========
+    //==========start==========
+
+    private void mergeSort7(int[] arr, int n) {
+        mergeSortInternally7(arr, 0, n - 1);
+    }
+
+    private void mergeSortInternally7(int[] arr, int p, int r) {
+        if (p >= r) return;
+        int q = (p + r) / 2;
+        mergeSortInternally7(arr, p, q);
+        mergeSortInternally7(arr, q + 1, r);
+        merge7(arr, p, q, r);
+    }
+
+    private void merge7(int[] arr, int p, int q, int r) {
+        int i = p;
+        int j = q;
+        int k = 0;
+        int[] tmp = new int[r - p + 1];
+        while (i <= q && j <= r) {
+            if (arr[i] < arr[j]) {
+                tmp[k++] = arr[i++];
+            } else {
+                tmp[k++] = arr[j++];
+            }
+        }
+        int start = i;
+        int end = q;
+        if (j <= r) {
+            start = j;
+            end = r;
+        }
+        while (start <= end) {
+            tmp[k++] = arr[start++];
+        }
+
+        for (i = 0; i < r - p; i++) {
+            arr[p + i] = tmp[i];
+        }
+    }
 
     //==========end==========
 }
