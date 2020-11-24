@@ -23,9 +23,6 @@ import java.util.Map;
  */
 class leetcode_1 {
     public int[] twoSum(int[] nums, int target) {
-        int [] s=new int[5];
-        System.arraycopy(s,0,s,0,s.length);
-
 
 
         Map<Integer, Integer> m = new HashMap();
