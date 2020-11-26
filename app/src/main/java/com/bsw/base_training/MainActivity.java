@@ -9,6 +9,7 @@ import com.bsw.base_training.tree.TreeNode;
 
 import java.util.Arrays;
 
+import static com.bsw.base_training.leetcode.leetcode_1572.merge;
 import static com.bsw.base_training.leetcode.leetcode_16.threeSumClosest;
 import static com.bsw.base_training.leetcode.leetcode_167.twoSum;
 import static com.bsw.base_training.leetcode.leetcode_844.backspaceCompare;
@@ -26,11 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn).setOnClickListener(v -> {
-            TreeNode root = createTree();
-            preOrder(root);
-            inOrder(root);
-            postOrder(root);
-
+            int[][] a={{1,4},{0,2},{3,5}};
+            merge(a);
         });
     }
 }

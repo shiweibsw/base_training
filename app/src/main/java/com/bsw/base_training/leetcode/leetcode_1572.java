@@ -15,7 +15,8 @@ package com.bsw.base_training.leetcode;
  * @Date 2020/11/26-13:55
  * @Email shiweibsw@gmail.com
  */
-class leetcode_1572 {
+public class leetcode_1572 {
+
     public int diagonalSum(int[][] mat) {
         int result = 0;
         int p = 0;
@@ -30,4 +31,5 @@ class leetcode_1572 {
         }
         return result;
     }
+
 }
