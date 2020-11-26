@@ -33,7 +33,6 @@ class Training_Node_Check_Intersection {
         return node1;
     }
 
-
     private Node checkIntersection2(Node l1, Node l2) {
         Node n1 = l1;
         Node n2 = l2;

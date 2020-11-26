@@ -346,7 +346,6 @@ public class Training_Search_bsearch {
                 high = mid - 1;
             }
         }
-
         return -1;
     }
 
