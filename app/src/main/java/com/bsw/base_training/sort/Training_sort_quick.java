@@ -235,7 +235,7 @@ public class Training_sort_quick {
     private int partition6(int[] arr, int p, int r) {
         int pivot = arr[r];
         int i = p;
-        for (int j = p; j < r ; j++) {
+        for (int j = p; j < r; j++) {
             if (arr[j] < pivot) {
                 if (i == j) {
                     i++;
@@ -248,6 +248,39 @@ public class Training_sort_quick {
         swap(arr[i], arr[r]);
         return i;
     }
+
+    //==========end==========
+
+    //==========start==========
+
+    private void quickSort7(int[] a, int n) {
+        quickSortInternally7(a, 0, n - 1);
+    }
+
+    private void quickSortInternally7(int[] a, int p, int r) {
+        if (p >= r) return;
+        int q = patition7(a, p, r);
+        quickSortInternally7(a, p, q - 1);
+        quickSortInternally7(a, q + 1, r);
+    }
+
+    private int patition7(int[] a, int p, int r) {
+        int pivot = a[r];
+        int i = p;
+        for (int j = p; j < r; j++) {
+            if (a[j] < pivot) {
+                if (i == j) {
+                    i++;
+                } else {
+                    swap(a[j], a[i]);
+                    i++;
+                }
+            }
+        }
+        swap(a[i], a[r]);
+        return i;
+    }
+
 
     //==========end==========
 
