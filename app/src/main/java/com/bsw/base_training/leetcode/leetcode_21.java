@@ -1,6 +1,4 @@
-package com.bsw.base_training.leetcode.list;
-
-import java.util.Arrays;
+package com.bsw.base_training.leetcode;
 
 /**
  * 合并两个有序链表

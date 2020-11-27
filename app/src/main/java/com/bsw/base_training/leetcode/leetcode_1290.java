@@ -1,4 +1,4 @@
-package com.bsw.base_training.leetcode.list;
+package com.bsw.base_training.leetcode;
 
 /**
  * @Author shiwei

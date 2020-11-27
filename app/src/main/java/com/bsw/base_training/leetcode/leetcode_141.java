@@ -1,7 +1,4 @@
-package com.bsw.base_training.leetcode.list;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.bsw.base_training.leetcode;
 
 /**
  * 给定一个链表，判断链表中是否有环。

@@ -1,4 +1,4 @@
-package com.bsw.base_training.leetcode.list;
+package com.bsw.base_training.leetcode;
 
 /**
  * 输入两个链表，找出它们的第一个公共节点。
