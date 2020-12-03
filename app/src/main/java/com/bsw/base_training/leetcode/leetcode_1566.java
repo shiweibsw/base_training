@@ -1,5 +1,7 @@
 package com.bsw.base_training.leetcode;
 
+import java.util.Stack;
+
 /**
  * 给你一个正整数数组 arr，请你找出一个长度为 m 且在数组中至少重复 k 次的模式。
  * <p>
@@ -43,6 +45,31 @@ package com.bsw.base_training.leetcode;
  * @Email shiweibsw@gmail.com
  */
 class leetcode_1566 {
+    public int maxProfit(int[] prices) {
+        int result = 0;
+        Stack<Integer> s = new Stack<Integer>();
+        for (int i = 0; i < prices.length; i++) {
+            if (s.isEmpty()) {
+                s.push(prices[i]);
+                continue;
+            }
+            if (prices[i] <= s.peek()) {
+                s.pop();
+                s.push(prices[i]);
+            } else {
+                if (i + 1 < prices.length) {
+                    if (prices[i] > prices[i + 1]) {
+                        result += prices[i] - s.pop();
+                        s.push(prices[i + 1]);
+                    }
+                } else {
+                    result += prices[i] - s.pop();
+                }
+            }
+        }
+        return result;
+    }
+
 
     public boolean containsPattern(int[] arr, int m, int k) {
         int n = arr.length;

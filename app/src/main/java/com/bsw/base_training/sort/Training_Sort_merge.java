@@ -132,8 +132,6 @@ public class Training_Sort_merge {
             a[i + p] = tmp[i];
         }
 
-
-
     }
     //==========end==========
     //==========start==========
