@@ -29,7 +29,7 @@ package com.bsw.base_training.leetcode;
  * @Date 2020/12/3-10:11
  * @Email shiweibsw@gmail.com
  */
-class leetcode_36 {//10-15 295 3517
+class leetcode_36 {
     public boolean isValidSudoku(char[][] board) {
         int[][] rows = new int[9][9];
         int[][] col = new int[9][9];
