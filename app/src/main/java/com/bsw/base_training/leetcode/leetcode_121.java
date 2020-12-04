@@ -1,7 +1,5 @@
 package com.bsw.base_training.leetcode;
 
-import java.util.Stack;
-
 /**
  * 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
  * <p>
@@ -29,21 +27,15 @@ import java.util.Stack;
  */
 class leetcode_121 {
     public int maxProfit(int[] prices) {
-        if (prices.length == 0) return 0;
-        int max = 0;
-        Stack<Integer> s = new Stack<Integer>();
-        s.push(prices[0]);
+        int initPrice = Integer.MAX_VALUE;
+        int maxValue = 0;
         for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < s.peek()) {
-                s.pop();
-                s.push(prices[i]);
-            } else {
-                int t = prices[i] - s.peek();
-                if (max < t) {
-                    max = t;
-                }
+            if (prices[i] < initPrice) {
+                initPrice = prices[i];
+            } else if (prices[i] - initPrice > maxValue) {
+                maxValue = prices[i] - initPrice;
             }
         }
-        return max;
+        return maxValue;
     }
 }
