@@ -153,4 +153,20 @@ class Training_Sort_Bubble {
         }
     }
 
+    private void bubbleSort9(int[] a, int n) {
+        if (n <= 1) return;
+        for (int i = 0; i < n; i++) {
+            boolean flag = false;
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (a[j] > a[j + 1]) {
+                    int t = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = t;
+                    flag = true;
+                }
+            }
+            if (!flag) break;
+        }
+    }
+
 }
