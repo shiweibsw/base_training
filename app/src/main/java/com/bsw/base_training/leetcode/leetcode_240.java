@@ -1,5 +1,12 @@
 package com.bsw.base_training.leetcode;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 编写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target 。该矩阵具有以下特性：
  * <p>
@@ -14,6 +21,7 @@ package com.bsw.base_training.leetcode;
  * @Email shiweibsw@gmail.com
  */
 class leetcode_240 {
+
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix.length == 0 || matrix[0].length == 0) return false;
         int i = 0;
@@ -29,4 +37,5 @@ class leetcode_240 {
         }
         return false;
     }
+
 }
