@@ -19,6 +19,8 @@ import java.util.Stack;
  * <p>
  * 输入："Test1ng-Leet=code-Q!"
  * 输出："Qedo1ct-eeLg=ntse-T!"
+ * <p>
+ * 知识点：Character.isLetter()可以用来判断char是不是字符
  *
  * @Author shiwei
  * @Date 2020/12/10-15:47
@@ -30,7 +32,6 @@ class leetcode_917 {
         for (char c : S.toCharArray())
             if (Character.isLetter(c))
                 letters.push(c);
-
         StringBuilder ans = new StringBuilder();
         for (char c : S.toCharArray()) {
             if (Character.isLetter(c))
