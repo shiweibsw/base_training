@@ -26,7 +26,7 @@ public class Training_Sort_merge {
 
     public static void merge(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -38,7 +38,7 @@ public class Training_Sort_merge {
         }
         // 判断哪个子数组中有剩余的数据
         int start = i;
-        int end = p;
+        int end = q;
         if (j <= r) {
             start = j;
             end = r;
@@ -67,7 +67,7 @@ public class Training_Sort_merge {
 
     private void merge1(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -109,7 +109,7 @@ public class Training_Sort_merge {
 
     private void merge2(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -150,7 +150,7 @@ public class Training_Sort_merge {
 
     private void merge3(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -195,7 +195,7 @@ public class Training_Sort_merge {
 
     private void merge4(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -237,7 +237,7 @@ public class Training_Sort_merge {
 
     private void merge5(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -279,7 +279,7 @@ public class Training_Sort_merge {
 
     private void merge6(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -321,7 +321,7 @@ public class Training_Sort_merge {
 
     private void merge7(int[] arr, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
@@ -364,7 +364,7 @@ public class Training_Sort_merge {
 
     private void merge8(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= p && j <= r) {
@@ -406,7 +406,7 @@ public class Training_Sort_merge {
 
     private void merge9(int[] a, int p, int q, int r) {
         int i = p;
-        int j = q;
+        int j = q+1;
         int k = 0;
         int[] tmp = new int[r - p + 1];
         while (i <= q && j <= r) {
