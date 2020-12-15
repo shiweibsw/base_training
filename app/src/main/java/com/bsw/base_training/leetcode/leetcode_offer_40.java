@@ -54,23 +54,63 @@ class leetcode_offer_40 {
 //        return res;
 
         //方法二 大根堆
-        if (k == 0 || arr.length == 0) {
-            return new int[0];
-        }
-        PriorityQueue<Integer> queue = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
-        for (int num : arr) {
-            if (queue.size() < k) {
-                queue.offer(num);
-            } else if (queue.peek() > num) {
-                queue.poll();
-                queue.offer(num);
+//        if (k == 0 || arr.length == 0) {
+//            return new int[0];
+//        }
+//        PriorityQueue<Integer> queue = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
+//        for (int num : arr) {
+//            if (queue.size() < k) {
+//                queue.offer(num);
+//            } else if (queue.peek() > num) {
+//                queue.poll();
+//                queue.offer(num);
+//            }
+//        }
+//        int[] res = new int[k];
+//        int idx = 0;
+//        while (!queue.isEmpty()) {
+//            res[idx++] = queue.poll();
+//        }
+//        return res;
+        //解法三 快排思想
+        if (k > arr.length)
+            return arr;
+        int low = 0;
+        int high = arr.length - 1;
+        while (low < high) {
+            int p = patition(arr, low, high);
+            if (p == k - 1) {
+                break;
+            } else if (p < k - 1) {
+                low = p + 1;
+            } else {
+                high = p - 1;
             }
         }
         int[] res = new int[k];
-        int idx = 0;
-        while (!queue.isEmpty()) {
-            res[idx++] = queue.poll();
-        }
+        System.arraycopy(arr, 0, res, 0, k);
         return res;
+
+    }
+
+    private int patition(int[] a, int p, int r) {
+        int pivot = a[r];
+        int i = p;
+        for (int j = p; j < r; j++) {
+            if (a[j] < pivot) {
+                if (i == j) {
+                    i++;
+                } else {
+                    int t = a[i];
+                    a[i] = a[j];
+                    a[j] = t;
+                    i++;
+                }
+            }
+        }
+        int t = a[i];
+        a[i] = a[r];
+        a[r] = t;
+        return i;
     }
 }
