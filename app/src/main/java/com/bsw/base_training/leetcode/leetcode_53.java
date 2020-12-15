@@ -18,6 +18,7 @@ package com.bsw.base_training.leetcode;
  */
 class leetcode_53 {
     public int maxSubArray(int[] nums) {
+
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
         int max = nums[0];
