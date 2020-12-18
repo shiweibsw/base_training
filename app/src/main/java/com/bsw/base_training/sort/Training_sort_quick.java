@@ -315,5 +315,4 @@ public class Training_sort_quick {
 
     //==========end==========
 
-
 }
