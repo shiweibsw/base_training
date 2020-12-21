@@ -1,6 +1,8 @@
 package com.bsw.base_training.linkedlist;
 
 
+import java.util.regex.Pattern;
+
 /**
  * 单链表检测环
  *
@@ -167,6 +169,20 @@ class Training_Node_CheckCircle {
             fast = fast.next.next;
             slow = slow.next;
             if (fast == slow) return true;
+        }
+        return false;
+    }
+
+    private boolean checkCircle13(Node head) {
+        if (head == null) return false;
+        Node fast = head.next;
+        Node slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
         }
         return false;
     }

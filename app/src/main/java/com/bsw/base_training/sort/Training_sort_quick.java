@@ -312,7 +312,34 @@ public class Training_sort_quick {
         return i;
     }
 
-
     //==========end==========
+    private void quickSort9(int[] a, int n) {
+        quickSortInternally9(a, 0, n - 1);
+    }
+
+    private void quickSortInternally9(int[] a, int p, int r) {
+        if (p >= r) return;
+        int q = patation9(a, p, r);
+        quickSortInternally9(a, p, q - 1);
+        quickSortInternally9(a, q + 1, r);
+    }
+
+    private int patation9(int[] a, int p, int r) {
+        int pivot = a[r];
+        int i = p;
+        for (int j = p; j < r; j++) {
+            if (a[j] < pivot) {
+                if (i == j) {
+                    i++;
+                } else {
+                    swap(a[i], a[j]);
+                    i++;
+                }
+            }
+        }
+        swap(a[i], a[r]);
+        return i;
+    }
+    //==========start==========
 
 }

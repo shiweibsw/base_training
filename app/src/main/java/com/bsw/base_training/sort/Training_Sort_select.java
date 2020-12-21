@@ -60,7 +60,7 @@ public class Training_Sort_select {
     private void selectSort3(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
-            int minInex = 0;
+            int minInex = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] < a[minInex]) {
                     minInex = j;
@@ -75,7 +75,7 @@ public class Training_Sort_select {
     private void selectSort4(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
-            int minIndex = 0;
+            int minIndex = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] < a[minIndex]) {
                     minIndex = j;
@@ -91,7 +91,7 @@ public class Training_Sort_select {
     private void selectSort5(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
-            int minIndex = 0;
+            int minIndex = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] < a[minIndex]) {
                     minIndex = a[j];
@@ -104,7 +104,7 @@ public class Training_Sort_select {
     private void selectSort6(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
-            int minindex = 0;
+            int minindex = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] < a[minindex]) {
                     minindex = j;
@@ -117,7 +117,7 @@ public class Training_Sort_select {
     private void selectSort7(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
-            int minIndex = 0;
+            int minIndex = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] < a[minIndex]) {
                     minIndex = j;
@@ -130,7 +130,7 @@ public class Training_Sort_select {
     private void selectSort8(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
-            int minIndex = 0;
+            int minIndex = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[j] < a[minIndex]) {
                     minIndex = j;
@@ -143,7 +143,20 @@ public class Training_Sort_select {
     private void selectSort9(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
-            int minIndex = 0;
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (a[minIndex] > a[j]) {
+                    minIndex = j;
+                }
+            }
+            swap(a[i], a[minIndex]);
+        }
+    }
+
+    private void selectSort10(int[] a, int n) {
+        if (n <= 1) return;
+        for (int i = 0; i < n; i++) {
+            int minIndex = i;
             for (int j = i + 1; j < n; j++) {
                 if (a[minIndex] > a[j]) {
                     minIndex = j;
