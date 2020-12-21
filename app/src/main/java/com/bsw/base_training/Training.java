@@ -146,8 +146,6 @@ class Training {
         }
         dp[i][j] = matrix[i][j] + Math.min(minLeft, minUp);
         return dp[i][j];
-
     }
-
 
 }
