@@ -12,5 +12,13 @@ import java.util.TreeSet;
  * @Email shiweibsw@gmail.com
  */
 class leetcode_22 {
-
+    public int maxArea(int[] height) {
+        int weight=0;
+        for(int i=0;i<height.length;i++){
+            for(int j=height.length-1;j>=0;j--){
+                weight=Math.max(Math.min(height[i],height[j])*(j-i),weight);
+            }
+        }
+        return weight;
+    }
 }
