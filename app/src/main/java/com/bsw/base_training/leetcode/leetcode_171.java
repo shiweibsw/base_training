@@ -40,4 +40,20 @@ class leetcode_171 {
         }
         return res;
     }
+    public int addDigits(int num) {
+        int res=num;
+        int n=0;
+        while(true){
+            n=res;
+            res=0;
+            while(n!=0){
+                int x=n%2;
+                res+=x;
+                n/=10;
+            }
+            if(res<9){
+                return res;
+            }
+        }
+    }
 }
