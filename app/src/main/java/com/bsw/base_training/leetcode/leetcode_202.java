@@ -47,7 +47,6 @@ class leetcode_202 {
             } else {
                 return false;
             }
-
         }
     }
 }
