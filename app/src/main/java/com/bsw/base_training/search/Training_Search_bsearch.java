@@ -235,7 +235,7 @@ public class Training_Search_bsearch {
             }
         }
         return -1;
-    }
+    }//022-2388136
 
     public int bsearch22(int[] a, int n, int value) {
         int low = 0;

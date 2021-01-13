@@ -199,4 +199,18 @@ class Training_Sort_Bubble {
         }
     }
 
+    private void bubbleSort12(int[] a, int n) {
+        if (n <= 1) return;
+        for (int i = 0; i < n; i++) {
+            boolean flag = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    flag = true;
+                    swap(a[j], a[j + 1]);
+                }
+            }
+            if (!flag) break;
+        }
+    }
+
 }
