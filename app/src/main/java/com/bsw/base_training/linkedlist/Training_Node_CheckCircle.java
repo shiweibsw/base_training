@@ -187,6 +187,7 @@ class Training_Node_CheckCircle {
         return false;
     }
 
+
     public static class Node {
         private int data;
         private Node next;

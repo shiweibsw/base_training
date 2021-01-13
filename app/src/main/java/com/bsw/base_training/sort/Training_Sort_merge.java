@@ -511,4 +511,44 @@ public class Training_Sort_merge {
         }
     }
     //==========end==========
+
+    //==========start==========
+    private void mergeSort12(int[] a, int n) {
+        mergeSortInternally12(a, 0, n - 1);
+    }
+
+    private void mergeSortInternally12(int[] a, int p, int r) {
+        if (p >= r) return;
+        int q = p + (r - p) / 2;
+        mergeSortInternally12(a, p, q);
+        mergeSortInternally12(a, q + 1, r);
+        merge12(a, p, q, r);
+    }
+
+    private void merge12(int[] a, int p, int q, int r) {
+        int i = p;
+        int j = q;
+        int k = 0;
+        int[] tem = new int[r - p + 1];
+        while (i <= q && j <= r) {
+            if (a[i] < a[j]) {
+                tem[k++] = a[i++];
+            } else {
+                tem[k++] = a[j++];
+            }
+        }
+        int start = i;
+        int end = q;
+        if (j <= r) {
+            start = j;
+            end = r;
+        }
+        while (start <= end) {
+            tem[k++] = a[start++];
+        }
+        for (i = 0; i <= r - p; i++) {
+            a[i + p] = tem[i];
+        }
+    }
+    //==========end==========
 }
