@@ -1,5 +1,7 @@
 package com.bsw.base_training;
 
+import java.util.Arrays;
+
 /**
  * @Author shiwei
  * @Date 2020/11/14-15:07
@@ -33,6 +35,7 @@ class Training {
             if (states[n - 1][i] == true) return i;
         }
         return -1;
+
     }
 
     /**
