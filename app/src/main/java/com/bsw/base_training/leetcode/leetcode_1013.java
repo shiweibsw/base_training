@@ -1,5 +1,8 @@
 package com.bsw.base_training.leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 给你一个整数数组 A，只有可以将其划分为三个和相等的非空部分时才返回 true，否则返回 false。
  * <p>
@@ -35,7 +38,6 @@ package com.bsw.base_training.leetcode;
 class leetcode_1013 {
     public boolean canThreePartsEqualSum(int[] arr) {
         int sum1 = 0;
-        int sum2 = 0;
         int sum3 = 0;
         int sum = 0;
         int n = arr.length;
@@ -74,5 +76,6 @@ class leetcode_1013 {
             return true;
         }
         return false;
+
     }
 }
