@@ -1,10 +1,5 @@
 package com.bsw.base_training.leetcode;
 
-import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-
 /**
  * @Author shiwei
  * @Date 2021/1/19-9:34
@@ -48,6 +43,7 @@ class leetcode_1535 {
         //     }
         // }
         // return big;
+        //官方版本
         int prev = Math.max(arr[0], arr[1]);
         if (k == 1) {
             return prev;
