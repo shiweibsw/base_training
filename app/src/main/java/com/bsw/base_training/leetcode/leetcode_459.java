@@ -6,5 +6,5 @@ package com.bsw.base_training.leetcode;
  * @Email shiweibsw@gmail.com
  */
 class leetcode_459 {
-    
+
 }
