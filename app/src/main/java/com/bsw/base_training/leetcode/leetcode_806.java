@@ -1,5 +1,8 @@
 package com.bsw.base_training.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author shiwei
  * @Date 2021/2/4-15:07
@@ -36,6 +39,7 @@ package com.bsw.base_training.leetcode;
  */
 class leetcode_806 {
     public int[] numberOfLines(int[] widths, String s) {
+
         int line = 0;
         int len = 0;
         for (int i = 0; i < s.length(); i++) {
