@@ -29,7 +29,6 @@ class leetcode_1004 {
         }
         return res;
 
-
         // int k = K;
         // int ans = 0;
         // int curr = 0;
