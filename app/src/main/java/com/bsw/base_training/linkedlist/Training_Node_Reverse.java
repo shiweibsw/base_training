@@ -52,9 +52,7 @@ class Training_Node_Reverse {
             curr = next;
         }
         return pre;
-
     }
-
 
     private static Node reverse4(Node header) {
         Node curr = header, pre = null;

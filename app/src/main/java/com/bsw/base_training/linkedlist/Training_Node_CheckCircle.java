@@ -1,8 +1,5 @@
 package com.bsw.base_training.linkedlist;
 
-
-import java.util.regex.Pattern;
-
 /**
  * 单链表检测环
  *
