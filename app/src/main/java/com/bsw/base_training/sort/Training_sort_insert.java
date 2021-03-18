@@ -13,23 +13,6 @@ import java.util.concurrent.LinkedBlockingQueue;
  */
 class Training_sort_insert {
 
-    public int calculate(String s) {
-        int ans = -1;
-        int num = 0;
-        boolean ji = false;
-        Queue<Integer> queue = new LinkedBlockingQueue<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (c != ' ') {
-                if (Character.isDigit(c)) {
-                    num = num * 10 + (c - '0');
-                } else {
-                    num = 0;
-                }
-            }
-        }
-        return ans;
-    }
 
     private void insertSort(int[] a, int n) {
         if (n <= 1) return;
