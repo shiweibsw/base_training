@@ -205,4 +205,19 @@ public class Training_Sort_select {
             swap(a[i], a[max]);
         }
     }
+
+    private void selectSort14(int[] a, int n) {
+        if (n <= 1) return;
+        for (int i = 0; i < n; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (a[minIndex] < a[j]) {
+                    minIndex = j;
+                }
+            }
+            swap(a[i], a[minIndex]);
+        }
+
+
+    }
 }
