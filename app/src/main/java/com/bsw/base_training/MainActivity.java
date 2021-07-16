@@ -4,8 +4,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bsw.base_training.test.CoinTest;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+
+class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     @Override
@@ -13,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn).setOnClickListener(v -> {
-            int[][] a = {{1, 4}, {0, 2}, {3, 5}};
+//            CoinTest.get(0, new ArrayList<Long>());
+            CoinTest.getResult(1, new ArrayList<Integer>());
         });
     }
 }
