@@ -305,7 +305,7 @@ class Training_Node_Merge_Two_List {
         return solider.next;
     }
 
-    private Node mergeTwoList(Node l1, Node l2) {
+    private Node mergeTwoList16(Node l1, Node l2) {
         Node solider = new Node(0, null);
         Node p = solider;
         while (l1 != null && l2 != null) {
@@ -322,6 +322,31 @@ class Training_Node_Merge_Two_List {
         if (l2 != null) p.next = l2;
         return solider.next;
     }
+
+
+    private Node mergeTwoLists17(Node l1, Node l2) {
+        Node solider = new Node(0, null);
+        Node p = solider;
+        while (l1 != null && l2 != null) {
+            if (l1.data < l2.data) {
+                p.next = l1;
+                l1 = l1.next;
+            } else {
+                p.next = l2;
+                l2 = l2.next;
+            }
+            p = p.next;
+        }
+
+        if (l1 != null) {
+            p.next = l1;
+        }
+        if (l2 != null) {
+            p.next = l2;
+        }
+        return solider.next;
+    }
+
 
     public static class Node {
         private int data;
