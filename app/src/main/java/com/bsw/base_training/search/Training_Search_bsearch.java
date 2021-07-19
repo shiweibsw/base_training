@@ -97,6 +97,24 @@ public class Training_Search_bsearch {
         return -1;
     }
 
+    private int bsearch50(int[] a, int value) {
+        int low = 0;
+        int high = a.length;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (a[mid] == value) {
+                return mid;
+            } else if (a[mid] > value) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+
+
+    }
+
 
     /**
      * 查找第一个值等于给定值的元素
@@ -160,7 +178,7 @@ public class Training_Search_bsearch {
         return -1;
     }
 
-    private int bsearch22(int[] a, int value) {
+    private int bsearch31(int[] a, int value) {
         int low = 0;
         int high = a.length - 1;
         while (low <= high) {
@@ -177,7 +195,7 @@ public class Training_Search_bsearch {
         return -1;
     }
 
-    private int bearch31(int[] a, int value) {
+    private int bsearch41(int[] a, int value) {
         int low = 0;
         int high = a.length - 1;
         while (low <= high) {
@@ -193,6 +211,28 @@ public class Training_Search_bsearch {
         }
         return -1;
     }
+
+
+    private int bsearch51(int[] a, int value) {
+        int low = 0;
+        int high = a.length;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (a[mid] > value) {
+                high = mid - 1;
+            } else if (a[mid] < value) {
+                low = mid + 1;
+            } else {
+                if (mid == 0 || a[mid - 1] < value) {
+                    return mid;
+                } else {
+                    high = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
+
 
     /**
      * 查找最后一个值等于给定值的元素
@@ -289,6 +329,26 @@ public class Training_Search_bsearch {
         return -1;
     }
 
+    private int beasrch52(int[] a, int value) {
+        int low = 0;
+        int higt = a.length;
+        while (low <= higt) {
+            int mid = low + ((higt - low) >> 1);
+            if (a[mid] > value) {
+                higt = mid - 1;
+            } else if (a[mid] < value) {
+                low = mid + 1;
+            } else {
+                if (mid == a.length - 1 || a[mid + 1] > value) {
+                    return mid;
+                } else {
+                    low = mid + 1;
+                }
+            }
+        }
+        return -1;
+    }
+
 
     /**
      * 查找第一个大于等于给定值的元素
@@ -359,6 +419,21 @@ public class Training_Search_bsearch {
         return -1;
     }
 
+    private int bsearch43(int[] a, int value) {
+        int low = 0;
+        int high = a.length;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (a[mid] >= value) {
+                if (mid == 0 || a[mid - 1] < value) return mid;
+                else high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+
 
     /**
      * 查找最后一个小于等于给定值的元素
@@ -413,7 +488,7 @@ public class Training_Search_bsearch {
         return -1;
     }
 
-    private int bearch43(int[] a, int value) {
+    private int bearch34(int[] a, int value) {
         int low = 0;
         int high = a.length - 1;
         while (low <= high) {
@@ -427,4 +502,21 @@ public class Training_Search_bsearch {
         }
         return -1;
     }
+
+    private int bsearch44(int[] a, int value) {
+        int low = 0;
+        int high = a.length;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (a[mid] <= value) {
+                if (mid == a.length - 1 || a[mid + 1] > value) return mid;
+                else low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return -1;
+    }
+
+
 }
