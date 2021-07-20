@@ -372,7 +372,6 @@ public class Training_sort_quick {
         return i;
     }
 
-
     //==========end==========
 
     private void quickSort11(int[] a, int n) {

@@ -34,6 +34,19 @@ class Training_Node_CopyList {
         return solider.next;
     }
 
+    private Node copyList2(Node head) {
+        Node curr = head;
+        Node solider = new Node(0, null);
+        Node p = solider;
+        while (curr != null) {
+            Node next = new Node(curr.data, null);
+            p.next = next;
+            curr = curr.next;
+            p = p.next;
+        }
+        return solider.next;
+    }
+
 
     public static class Node {
         private int data;
