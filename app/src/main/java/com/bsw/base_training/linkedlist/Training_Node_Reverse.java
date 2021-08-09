@@ -230,6 +230,21 @@ class Training_Node_Reverse {
     }
 
 
+    private Node reverse19(Node head) {
+        if (head == null)
+            return null;
+        Node curr = head;
+        Node pre = null;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
+
     public static class Node {
         private int data;
         private Node next;

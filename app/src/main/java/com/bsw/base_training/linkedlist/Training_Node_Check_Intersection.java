@@ -94,6 +94,17 @@ class Training_Node_Check_Intersection {
     }
 
 
+    private Node checkIntersection8(Node l1, Node l2) {
+        Node n1 = l1;
+        Node n2 = l2;
+        while (n1 != n2) {
+            n1 = n1.next == null ? l2 : n1.next;
+            n2 = n2.next == null ? l1 : n2.next;
+        }
+        return n1;
+    }
+
+
     public static class Node {
         private int data;
         private Node next;
@@ -111,4 +122,6 @@ class Training_Node_Check_Intersection {
             return data;
         }
     }
+
+
 }
