@@ -289,4 +289,21 @@ class Training_sort_insert {
     }
 
 
+    private void insertSort17(int[] a, int n) {
+        if (n <= 0) return;
+        for (int i = 0; i < n; i++) {
+            int value = a[i];
+            int j = i - 1;
+            for (; j >= 0; i--) {
+                if (a[j] > value) {
+                    a[j + 1] = a[j];
+                } else {
+                    break;
+                }
+            }
+            a[j + 1] = value;
+        }
+    }
+
+
 }
