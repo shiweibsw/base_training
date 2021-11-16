@@ -10,6 +10,7 @@ import java.util.List;
  */
 class leetcode_934 {
     public int shortestBridge(int[][] grid) {
+
         int res = 0;
         List<Point> lands = new ArrayList<Point>();
         int m = grid.length;
