@@ -288,7 +288,6 @@ class Training_sort_insert {
         }
     }
 
-
     private void insertSort17(int[] a, int n) {
         if (n <= 0) return;
         for (int i = 0; i < n; i++) {
