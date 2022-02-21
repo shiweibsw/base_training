@@ -1,8 +1,5 @@
 package com.bsw.base_training.leetcode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -22,7 +19,6 @@ class leetcode_384 {
     }
 
     public int[] shuffle() {
-
         Random r = new Random();
         int[] result = new int[origins.length];
         System.arraycopy(origins, 0, result, 0, origins.length);
