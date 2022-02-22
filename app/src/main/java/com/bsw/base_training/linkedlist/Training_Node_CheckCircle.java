@@ -21,9 +21,7 @@ class Training_Node_CheckCircle {
         return false;
     }
 
-
     private boolean checkCircle2(Node header) {
-
         if (header == null) return false;
         Node fast = header.next;
         Node slow = header;
@@ -34,7 +32,6 @@ class Training_Node_CheckCircle {
         }
         return false;
     }
-
 
     private boolean checkCircle3(Node header) {
         if (header == null) return false;
@@ -73,7 +70,6 @@ class Training_Node_CheckCircle {
             if (fast == slow) return true;
         }
         return false;
-
     }
 
     private boolean checkCircle6(Node head) {
@@ -226,7 +222,6 @@ class Training_Node_CheckCircle {
         return false;
     }
 
-
     private Boolean checkCircle17(Node head) {
         if (head == null) return false;
         Node fast = head.next;
@@ -282,11 +277,6 @@ class Training_Node_CheckCircle {
         }
         return false;
     }
-
-
-
-
-
 
     public static class Node {
         private int data;
