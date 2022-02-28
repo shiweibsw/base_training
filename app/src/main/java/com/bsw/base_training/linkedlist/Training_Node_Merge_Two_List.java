@@ -410,14 +410,33 @@ class Training_Node_Merge_Two_List {
         while (l1 != null && l2 != null) {
             if (l1.data > l2.data) {
                 p.next = l2;
-                l1 = l1.next;
+                l2 = l2.next;
             } else {
                 p.next = l1;
-                l2 = l2.next;
+                l1 = l1.next;
             }
             p = p.next;
         }
 
+        if (l1 != null) p.next = l1;
+        if (l2 != null) p.next = l2;
+        return solider.next;
+    }
+
+
+    private Node mergeTwoList22(Node l1, Node l2) {
+        Node solider = new Node(0, null);
+        Node p = solider;
+        while (l1 != null && l2 != null) {
+            if (l1.data > l2.data) {
+                p.next = l2;
+                l2 = l2.next;
+            } else {
+                p.next = l1;
+                l1 = l1.next;
+            }
+            p = p.next;
+        }
         if (l1 != null) p.next = l1;
         if (l2 != null) p.next = l2;
         return solider.next;
