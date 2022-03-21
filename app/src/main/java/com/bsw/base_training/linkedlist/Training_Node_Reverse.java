@@ -293,6 +293,18 @@ class Training_Node_Reverse {
         return pre;
     }
 
+    private Node reverse24(Node head) {
+        if (head == null) return null;
+        Node curr = head, pre = null;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
 
     public static class Node {
         private int data;
