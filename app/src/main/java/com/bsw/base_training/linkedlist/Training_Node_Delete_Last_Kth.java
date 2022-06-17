@@ -535,6 +535,53 @@ class Training_Node_Delete_Last_Kth {
         return head;
     }
 
+    private Node deleteLastKth23(Node head, int k) {
+        int i = 1;
+        Node fast = head;
+        while (fast != null && i < k) {
+            fast = fast.next;
+            i++;
+        }
+        if (fast == null) return head;
+        Node slow = head;
+        Node pre = null;
+        while (fast.next != null) {
+            fast = fast.next;
+            pre = slow;
+            slow = slow.next;
+        }
+        if (pre == null) {
+            return head.next;
+        } else {
+            pre.next = pre.next.next;
+        }
+        return head;
+    }
+
+    private Node deleteLastKth24(Node head, int k) {
+        int i = 1;
+        Node fast = head;
+        while (fast != null && i < k) {
+            fast = fast.next;
+            i++;
+        }
+        if (fast == null) return head;
+        Node slow = head;
+        Node pre = null;
+        while (fast.next != null) {
+            fast = fast.next;
+            pre = slow;
+            slow = slow.next;
+        }
+        if (pre == null) {
+            return head.next;
+        } else {
+            pre.next = pre.next.next;
+        }
+        return head;
+    }
+
+
 
     public static class Node {
         private int data;

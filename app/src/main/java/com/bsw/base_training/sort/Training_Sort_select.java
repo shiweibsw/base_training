@@ -232,5 +232,18 @@ public class Training_Sort_select {
         }
     }
 
+    private void selectSort16(int[] a, int n) {
+        if (n <= 1) return;
+        for (int i = 0; i < n; i++) {
+            int min = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (a[min] > a[j]) {
+                    min = j;
+                }
+            }
+            swap(a[min], a[i]);
+        }
+    }
+
 
 }
