@@ -35,7 +35,34 @@ class Training_Node_Delete_Last_Kth {
         return list;
     }
 
-    public static Node deleteLastKTh(Node list, int k) {
+    public static Node deleteLastKth28(Node list, int k) {
+        Node fast = list;
+        int i = 1;
+        while (fast != null && i < k) {
+            fast = fast.next;
+            i++;
+        }
+        if (fast == null) return list;
+        Node slow = list;
+        Node prev = null;
+        while (fast.next != null) {
+            fast = fast.next;
+            prev = slow;
+            slow = slow.next;
+        }
+
+        if (prev == null) {
+            list = list.next;
+        } else {
+            prev.next = prev.next.next;
+        }
+        return list;
+
+
+    }
+
+
+    public static Node deleteLastKth27(Node list, int k) {
         Node fast = list;
         int i = 1;
         while (fast != null && i < k) {

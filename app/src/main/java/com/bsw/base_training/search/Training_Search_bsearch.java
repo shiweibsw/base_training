@@ -33,6 +33,23 @@ public class Training_Search_bsearch {
         return -1;
     }
 
+    private int bsearch100(int[] a, int n, int value) {
+        int low = 0;
+        int high = n - 1;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (a[mid] == value) {
+                return mid;
+            } else if (a[mid] > value) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+
+
     private int bsearch90(int[] a, int n, int value) {
         int low = 0;
         int high = n - 1;
@@ -204,6 +221,24 @@ public class Training_Search_bsearch {
 
         return -1;
     }
+
+    private int bsearch91(int[] a, int n, int value) {
+        int low = 0;
+        int high = n - 1;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (a[mid] > value) {
+                high = mid - 1;
+            } else if (a[mid] < value) {
+                low = mid + 1;
+            } else {
+                if (mid == 0 || a[mid - 1] != value) return mid;
+                else high = mid - 1;
+            }
+        }
+        return -1;
+    }
+
 
     private int bsearch81(int[] a, int n, int value) {
         int low = 0;
@@ -525,6 +560,25 @@ public class Training_Search_bsearch {
         }
         return -1;
     }
+
+
+    public int bsearch73(int[] a, int n, int value) {
+        int low = 0;
+        int high = n - 1;
+        while (low <= high) {
+            int mid = low + (high - low) >> 1;
+            if (a[mid] >= value) {
+                if (mid == 0 || a[mid - 1] < value) return mid;
+                else high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+
+
+    }
+
 
     public int bsearch63(int[] a, int n, int value) {
         int low = 0;

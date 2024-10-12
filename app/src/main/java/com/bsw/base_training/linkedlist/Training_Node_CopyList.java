@@ -21,6 +21,22 @@ class Training_Node_CopyList {
         return solider.next;
     }
 
+    private Node copyList9(Node head) {
+        Node curr = head;
+        Node solider = new Node(0, null);
+        Node p = solider;
+        while (curr != null) {
+            Node next = new Node(curr.data, null);
+            p.next = next;
+            curr = curr.next;
+            p = p.next;
+        }
+        return solider.next;
+
+
+    }
+
+
     private Node copyList8(Node head) {
         Node curr = head;
         Node solider = new Node(0, null);
