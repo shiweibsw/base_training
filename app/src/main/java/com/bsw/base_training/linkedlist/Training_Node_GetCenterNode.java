@@ -20,6 +20,30 @@ class Training_Node_GetCenterNode {
         return slow;
     }
 
+    public Node findMiddleNode26(Node list) {
+        Node fast = list;
+        Node slow = list;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+
+    public Node findMiddleNode25(Node list) {
+        if (list == null) return null;
+        Node fast = list;
+        Node slow = list;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+
+
+    }
+
 
     private Node findMiddleNode2(Node header) {
         if (header == null) return null;

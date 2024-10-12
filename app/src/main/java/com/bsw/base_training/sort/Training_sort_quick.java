@@ -51,6 +51,42 @@ public class Training_sort_quick {
 
     //==========end==========
 
+    //==========start==========
+    public static void quickSort17(int[] a, int n) {
+        quickSortInternally17(a, 0, n - 1);
+    }
+
+    public static void quickSortInternally17(int[] a, int p, int r) {
+        if (p >= r) return;
+        int q = partition17(a, p, r);
+        quickSortInternally17(a, p, q - 1);
+        quickSortInternally17(a, q + 1, r);
+    }
+
+    public static int partition17(int[] a, int p, int r) {
+        int pivot = a[r];
+        int i = p;
+        for (int j = p; j < r; j++) {
+            if (a[j] < pivot) {
+                if (i == j) {
+                    i++;
+                } else {
+                    int tmp = a[i];
+                    a[i] = a[j];
+                    a[j] = tmp;
+                    i++;
+                }
+            }
+        }
+        int tmp = a[r];
+        a[r] = a[i];
+        a[i] = tmp;
+        return i;
+    }
+
+
+    //==========end==========
+
 
     //==========start==========
     private void quickSort1(int[] a, int n) {
@@ -124,6 +160,8 @@ public class Training_sort_quick {
 
 
     //==========end==========
+
+
     //==========start==========
 
     private void quickSort3(int[] a, int n) {
@@ -524,5 +562,36 @@ public class Training_sort_quick {
 
 
     //==========end============
+
+    private void quickSort16(int[] a, int n) {
+        quickSortInternally16(a, 0, n - 1);
+    }
+
+    private void quickSortInternally16(int[] a, int p, int r) {
+        if (p >= r) return;
+        int q = parttition16(a, p, r);
+        quickSortInternally16(a, p, q - 1);
+        quickSortInternally16(a, q + 1, r);
+    }
+
+    private int parttition16(int[] a, int p, int r) {
+        int pivot = a[r];//选取当前区间最后一个作为分区点
+        int i = p;
+        for (int j = p; j < r; j++) {
+            if (a[j] < pivot) {
+                if (i == j) {
+                    i++;
+                } else {
+                    swap(a[i], a[j]);
+                    i++;
+                }
+            }
+        }
+        swap(a[r], a[i]);
+        return i;
+    }
+
+
+    //==========start==========
 
 }

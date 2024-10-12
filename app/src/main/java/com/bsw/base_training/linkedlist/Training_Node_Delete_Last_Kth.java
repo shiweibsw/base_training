@@ -27,13 +27,65 @@ class Training_Node_Delete_Last_Kth {
             slow = slow.next;
         }
 
-        if (prev == null) {
+        if (prev == null) {//删除头节点
             list = list.next;
         } else {
             prev.next = prev.next.next;
         }
         return list;
     }
+
+    public static Node deleteLastKTh(Node list, int k) {
+        Node fast = list;
+        int i = 1;
+        while (fast != null && i < k) {
+            fast = fast.next;
+            i++;
+        }
+        if (fast == null) return list;
+        Node slow = list;
+        Node prev = null;
+        while (fast.next != null) {
+            fast = fast.next;
+            prev = slow;
+            slow = slow.next;
+        }
+        if (prev == null) {
+            list = list.next;
+        } else {
+            prev.next = prev.next.next;
+        }
+        return list;
+
+    }
+
+
+    public static Node deleteLastKth26(Node list, int k) {
+        Node fast = list;
+        int i = 1;
+        while (fast != null && i < k) {
+            fast = fast.next;
+            ++i;
+        }
+        if (fast == null) return list;
+
+        Node slow = list;
+        Node prev = null;
+        while (fast.next != null) {
+            fast = fast.next;
+            prev = slow;
+            slow = slow.next;
+        }
+        if (prev == null) {
+            list = list.next;
+        } else {
+            prev.next = prev.next.next;
+        }
+        return list;
+
+
+    }
+
 
     public Node deleteLastKth2(Node list, int k) {
         Node fast = list;
@@ -580,7 +632,6 @@ class Training_Node_Delete_Last_Kth {
         }
         return head;
     }
-
 
 
     public static class Node {

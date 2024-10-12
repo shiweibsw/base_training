@@ -27,8 +27,8 @@ class Training_Node_Check_Intersection {
         Node node1 = l1;
         Node node2 = l2;
         while (node1 != node2) {
-            node1 = node1.next == null ? l2 : node1.next;
-            node2 = node2.next == null ? l1 : node2.next;
+            node1 = node1 == null ? l2 : node1.next;
+            node2 = node2 == null ? l1 : node2.next;
         }
         return node1;
     }
@@ -37,8 +37,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = (n1.next == null) ? l2 : n1.next;
-            n2 = (n2.next == null) ? l1 : n2.next;
+            n1 = (n1 == null) ? l2 : n1.next;
+            n2 = (n2 == null) ? l1 : n2.next;
         }
         return n1;
     }
@@ -47,8 +47,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = (n1.next == null) ? l2 : n1.next;
-            n2 = (n2.next == null) ? l1 : n2.next;
+            n1 = (n1 == null) ? l2 : n1.next;
+            n2 = (n2 == null) ? l1 : n2.next;
         }
         return n1;
     }
@@ -57,8 +57,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = (n1.next == null) ? l2 : n1.next;
-            n2 = (n2.next == null) ? l1 : n2.next;
+            n1 = (n1 == null) ? l2 : n1.next;
+            n2 = (n2 == null) ? l1 : n2.next;
         }
         return n1;
     }
@@ -67,8 +67,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = n1.next == null ? l2 : n1.next;
-            n2 = n2.next == null ? l1 : n2.next;
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
         }
         return n1;
     }
@@ -77,8 +77,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = n1.next == null ? l2 : n1.next;
-            n2 = n2.next == null ? l1 : n2.next;
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
         }
         return n1;
     }
@@ -87,8 +87,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = n1.next == null ? l2 : n1.next;
-            n2 = n2.next == null ? l1 : n2.next;
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
         }
         return n1;
     }
@@ -98,8 +98,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = n1.next == null ? l2 : n1.next;
-            n2 = n2.next == null ? l1 : n2.next;
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
         }
         return n1;
     }
@@ -109,8 +109,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = n1.next == null ? l2 : n1.next;
-            n2 = n2.next == null ? l1 : n2.next;
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
         }
         return n1;
     }
@@ -120,8 +120,8 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = n1.next == null ? l2 : n1.next;
-            n2 = n2.next == null ? l1 : n2.next;
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
         }
         return n1;
     }
@@ -131,8 +131,18 @@ class Training_Node_Check_Intersection {
         Node n1 = l1;
         Node n2 = l2;
         while (n1 != n2) {
-            n1 = n1.next == null ? l2 : n1.next;
-            n2 = n2.next == null ? l1 : n2.next;
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
+        }
+        return n1;
+    }
+
+    private Node checkIntersectin12(Node l1, Node l2) {
+        Node n1 = l1;
+        Node n2 = l2;
+        while (n1 != n2) {
+            n1 = n1 == null ? l2 : n1.next;
+            n2 = n2 == null ? l1 : n2.next;
         }
         return n1;
     }

@@ -20,6 +20,30 @@ class Training_Node_Reverse {
         return pre;
     }
 
+    private Node reverse28(Node head) {
+        Node curr = head, pre = null;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
+
+    private Node reverse27(Node head) {
+        Node curr = head, pre = null;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
+
     private Node reverse1(Node header) {
         Node curr = header, pre = null;
         while (curr != null) {
@@ -307,6 +331,17 @@ class Training_Node_Reverse {
 
     private Node reverse25(Node head) {
         if (head == null) return null;
+        Node curr = head, pre = null;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
+    private Node reverse26(Node head) {
         Node curr = head, pre = null;
         while (curr != null) {
             Node next = curr.next;
