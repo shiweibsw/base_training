@@ -20,6 +20,17 @@ class Training_Node_Reverse {
         return pre;
     }
 
+    private Node reverse30(Node head) {
+        Node curr = head, pre = null;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
     private Node reverse29(Node head) {
         Node curr = head, pre = null;
         while (curr != null) {

@@ -52,6 +52,42 @@ public class Training_sort_quick {
     //==========end==========
 
     //==========start==========
+
+    private void quickSort18(int[] a, int n) {
+        quickSortInternally18(a, 0, n - 1);
+    }
+
+    private void quickSortInternally18(int[] a, int p, int r) {
+        if (p >= r) return;
+        int q = partition18(a, p, r);
+        quickSortInternally18(a, p, q - 1);
+        quickSortInternally18(a, q + 1, r);
+    }
+
+    private int partition18(int[] a, int p, int r) {
+        int pivot = a[r];
+        int i = p;
+        for (int j = p; j < r; j++) {
+            if (a[j] < pivot) {
+                i++;
+            } else {
+                int t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+                i++;
+            }
+        }
+        int t = a[r];
+        a[r] = a[i];
+        a[i] = t;
+        return i;
+    }
+
+
+    //==========end==========
+
+
+    //==========start==========
     public static void quickSort17(int[] a, int n) {
         quickSortInternally17(a, 0, n - 1);
     }
